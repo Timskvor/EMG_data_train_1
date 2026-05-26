@@ -1,0 +1,11 @@
+fold,seed,n_train,n_validation,n_test,train_subject_count,validation_subject_count,test_subject,test_subject_sessions_total,test_subject_sessions_adapt,test_subject_sessions_eval,test_subject_trials_adapt,test_subject_trials_eval
+1,43,6768,130,120,88,2,sub-005,12,6,6,60,60
+2,44,6828,100,90,88,2,sub-040,9,4,5,40,50
+3,45,6779,150,89,88,2,sub-003,9,4,5,40,49
+4,46,6829,130,59,88,2,sub-068,6,3,3,30,29
+5,47,6848,130,40,88,2,sub-074,4,2,2,20,20
+6,48,6788,140,90,88,2,sub-029,9,4,5,40,50
+7,49,6748,180,90,88,2,sub-047,9,4,5,40,50
+8,50,6758,210,50,88,2,sub-042,5,2,3,20,30
+9,51,6809,139,70,88,2,sub-090,7,4,3,40,30
+10,52,6798,140,80,88,2,sub-028,8,4,4,40,40

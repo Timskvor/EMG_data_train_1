@@ -1,0 +1,10 @@
+numpy
+scipy
+pandas
+matplotlib
+scikit-learn
+torch
+mne
+jupyterlab
+ipykernel
+pyedflib

@@ -1,0 +1,29 @@
+include README.md
+include requirements.txt
+include .gitignore
+include MANIFEST.in
+
+recursive-include src *.py
+recursive-include models *.py
+recursive-include notebooks *.ipynb
+recursive-include data/preprocessing *.ipynb
+recursive-include data/datasets *.metadata.json
+
+recursive-include reports *.md
+recursive-include reports *.py
+recursive-include reports *.docx
+recursive-include reports *.html
+recursive-include reports/artifacts *.json
+recursive-include reports/artifacts *.csv
+recursive-include reports/figures *.png
+
+global-exclude __pycache__/*
+global-exclude *.py[cod]
+global-exclude *.so
+global-exclude .DS_Store
+global-exclude *.ipynb_checkpoints*
+
+prune data/raw
+recursive-exclude data/datasets *.npz
+recursive-exclude reports *.tmp
+recursive-exclude reports *.bak

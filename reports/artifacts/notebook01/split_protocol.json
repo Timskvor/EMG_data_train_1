@@ -1,0 +1,38 @@
+{
+  "protocol_id": "notebook01_split_protocol_v1",
+  "experiment": "notebook01_cross_dataset_transfer_grid",
+  "split_unit": "sample",
+  "stratification": "class-stratified by target per dataset",
+  "ratios": {
+    "train": 0.6,
+    "validation": 0.2,
+    "test": 0.2
+  },
+  "seed_policy": {
+    "base_seed": 42,
+    "per_dataset_seed": {
+      "old": 42,
+      "nm": 1042,
+      "hcmyo": 2042
+    },
+    "rule": "seed = base_seed + 1000 * dataset_index"
+  },
+  "stage_usage": {
+    "stageA_pretrain_transfer": {
+      "train": "pretrain_ds.train",
+      "validation": "pretrain_ds.validation"
+    },
+    "stageB_finetune_transfer_and_scratch": {
+      "train": "finetune_ds.train",
+      "validation": "finetune_ds.validation",
+      "target_test": "finetune_ds.test",
+      "unseen_test": "unseen_ds.test"
+    }
+  },
+  "constraints": {
+    "class_count_lt_3": "all samples assigned to train in stratified_split",
+    "ratio_tolerance_assert": 0.03,
+    "non_empty_required_splits": true,
+    "split_disjointness_required": true
+  }
+}

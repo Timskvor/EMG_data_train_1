@@ -1,0 +1,35 @@
+{
+  "protocol_id": "notebook03_split_protocol_v2",
+  "experiment": "notebook03_hcmyo_three_run_loo_adaptation",
+  "outer_split": {
+    "unit": "subject",
+    "design": "3-run leave-one-subject-out over exactly 3 subjects",
+    "subjects": [
+      "S01",
+      "S02",
+      "S03"
+    ]
+  },
+  "inner_split": {
+    "unit": "trial",
+    "stratification": "class-stratified within target subject",
+    "adapt_ratio": 0.1,
+    "seed_rule": "run_seed + 17",
+    "run_seed_rule": "STAGEA_CFG.seed + run_id"
+  },
+  "stage_usage": {
+    "stageA": {
+      "train": "non-target subjects",
+      "monitor": "source-only validation monitor val_adapt_monitor_f1 (no target peeking)"
+    },
+    "stageB": {
+      "adapt": "target adapt trials",
+      "final_test": "target eval trials"
+    }
+  },
+  "constraints": {
+    "non_empty_adapt_eval": true,
+    "ratio_tolerance_assert": 0.02,
+    "class_gt1_split_required": true
+  }
+}

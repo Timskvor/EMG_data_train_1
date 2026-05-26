@@ -1,0 +1,69 @@
+# Python caches
+__pycache__/
+*.py[cod]
+*.so
+
+# Jupyter
+.ipynb_checkpoints/
+*.nbconvert.ipynb
+
+# Virtual environments (all local variants)
+.venv/
+.venv*/
+venv/
+venv*/
+env/
+env*/
+ENV/
+ENV*/
+
+# Build and packaging
+build/
+dist/
+*.egg-info/
+pip-wheel-metadata/
+
+# Tool caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# IDE / OS noise
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.~lock*
+
+# Logs and runtime artifacts
+*.log
+logs/
+tmp/
+temp/
+
+# Training artifacts
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.bin
+*.h5
+*.onnx
+*.joblib
+checkpoints/
+**/checkpoints/
+runs/
+wandb/
+lightning_logs/
+
+# Local heavy data (keep metadata only)
+data/raw/**
+data/datasets/*.npz
+!data/datasets/*.metadata.json
+
+# Temporary report files
+reports/.tmp*
+reports/*.tmp
+reports/*.bak

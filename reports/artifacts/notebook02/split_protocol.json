@@ -1,0 +1,36 @@
+{
+  "protocol_id": "notebook02_split_protocol_v2",
+  "experiment": "notebook02_nm_session_aware_subject_adaptation",
+  "outer_split": {
+    "unit": "subject",
+    "n_folds": 10,
+    "n_validation_subjects_per_fold": 2,
+    "min_eval_sessions": 2,
+    "test_subject_exclude_prefixes": [],
+    "seed": 42
+  },
+  "inner_split": {
+    "unit": "session",
+    "ratio_adapt_eval": "approximately 50/50 by session count",
+    "preserve_session_boundaries": true,
+    "val_seed_rule": "fold_seed + 100 + i",
+    "test_seed_rule": "fold_seed + 777"
+  },
+  "eligible_eval_subjects_count": 86,
+  "total_subjects_count": 91,
+  "stage_usage": {
+    "stageA": {
+      "train": "fold.train_subjects",
+      "validation_monitor": "fold.validation_subjects adapt/eval via val_adapt_monitor_f1"
+    },
+    "stageB": {
+      "adapt": "test_subject adapt sessions",
+      "final_test": "test_subject eval sessions"
+    }
+  },
+  "constraints": {
+    "non_empty_required_partitions": true,
+    "subject_overlap_forbidden": true,
+    "min_eval_sessions_enforced": true
+  }
+}

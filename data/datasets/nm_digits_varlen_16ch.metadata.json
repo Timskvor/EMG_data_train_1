@@ -1,0 +1,43 @@
+{
+  "source": "nm000106",
+  "n_sessions": 807,
+  "processed_digit_events": 7019,
+  "kept_windows": 7018,
+  "skipped_out_of_bounds": 0,
+  "skipped_stub_sessions": 0,
+  "skipped_invalid_duration": 1,
+  "clipped_low_count": 70,
+  "clipped_high_count": 71,
+  "source_sfreq_hz": 2000,
+  "target_sfreq_hz": 1000,
+  "duration_q_low": 0.01,
+  "duration_q_high": 0.99,
+  "duration_clip_sec": {
+    "low": 0.7395,
+    "high": 23.360394999999997
+  },
+  "length_stats": {
+    "n": 7018.0,
+    "min": 740.0,
+    "max": 23360.0,
+    "mean": 2024.880022798518,
+    "median": 1411.0,
+    "q01": 740.0,
+    "q05": 878.0,
+    "q95": 3261.199999999997,
+    "q99": 23352.179999999997
+  },
+  "format": "varlen_npz",
+  "channel_variant": "16-channel",
+  "length_stats_packed": {
+    "n": 7018.0,
+    "min": 740.0,
+    "max": 23360.0,
+    "mean": 2024.880022798518,
+    "median": 1411.0,
+    "q01": 740.0,
+    "q05": 878.0,
+    "q95": 3261.199999999997,
+    "q99": 23352.179999999997
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "source": "old_dataset",
+  "recordings_root": "data_8ch_EMG",
+  "metadata_json_path": "code_anna/emg_handwriting-main/emg_handwriting-main/dataset_metadata.json",
+  "n_recordings": 11,
+  "processed_trials": 5541,
+  "kept_windows": 5534,
+  "skipped_no_onpaper": 7,
+  "skipped_too_short": 0,
+  "skipped_bad_target": 0,
+  "sfreq_hz": 1000,
+  "crop_rule": "onpaper_only",
+  "length_stats": {
+    "n": 5534.0,
+    "min": 328.0,
+    "max": 9203.0,
+    "mean": 1924.8879653053848,
+    "median": 1875.0,
+    "q01": 517.0,
+    "q05": 718.0,
+    "q95": 3251.0,
+    "q99": 4110.0
+  },
+  "format": "varlen_npz",
+  "length_stats_packed": {
+    "n": 5534.0,
+    "min": 328.0,
+    "max": 9203.0,
+    "mean": 1924.8879653053848,
+    "median": 1875.0,
+    "q01": 517.0,
+    "q05": 718.0,
+    "q95": 3251.0,
+    "q99": 4110.0
+  }
+}

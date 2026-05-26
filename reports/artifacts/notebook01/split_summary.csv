@@ -1,0 +1,10 @@
+dataset,split,n
+hcmyo,test,6003
+hcmyo,train,18000
+hcmyo,validation,5997
+nm,test,1409
+nm,train,4209
+nm,validation,1400
+old,test,1107
+old,train,3320
+old,validation,1107

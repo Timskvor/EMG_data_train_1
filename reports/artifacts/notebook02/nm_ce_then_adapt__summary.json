@@ -1,0 +1,72 @@
+{
+  "n_folds": 10,
+  "n_valid_test_adapt_folds": 8,
+  "n_skipped_test_adapt_folds": 2,
+  "val_adapt_monitor_f1_mean": 0.6652163114663114,
+  "val_zero_shot_acc_mean": 0.5136120689655173,
+  "val_zero_shot_f1_mean": 0.48294614402625236,
+  "val_pre_adapt_proto_f1_mean": 0.5040770757020757,
+  "val_adapt_acc_mean": 0.607117816091954,
+  "val_adapt_f1_mean": 0.6068200826950827,
+  "test_zero_shot_acc_mean": 0.5454228243021346,
+  "test_zero_shot_f1_mean": 0.5117946264262054,
+  "test_pre_adapt_proto_f1_mean": 0.5778999333999334,
+  "test_adapt_acc_mean": 0.6280379134412386,
+  "test_adapt_f1_mean": 0.6182629829321006,
+  "test_adapt_acc_mean_valid_only": 0.6280379134412386,
+  "test_adapt_f1_mean_valid_only": 0.6182629829321006,
+  "test_adapt_acc_mean_all": 0.6107636640863241,
+  "test_adapt_f1_mean_all": 0.5933008625361567,
+  "test_pre_query_coverage_mean": 1.0,
+  "test_adapt_query_coverage_mean": 1.0,
+  "zero_shot_definition": "pure_zero_shot_no_target_subject_statistics",
+  "split_cfg": {
+    "seed": 42,
+    "n_folds": 10,
+    "n_val_subjects": 2,
+    "test_subject_exclude_prefixes": [],
+    "min_eval_sessions": 2
+  },
+  "subject_norm_cfg": {
+    "clip": 6.0,
+    "method": "robust",
+    "eps": 1e-06
+  },
+  "length_cap_cfg": {
+    "policy": "mean_train"
+  },
+  "stageA_cfg": {
+    "seed": 42,
+    "device": "cuda",
+    "epochs": 70,
+    "batch_size": 64,
+    "lr": 0.0007,
+    "weight_decay": 0.0001,
+    "patience": 15,
+    "grad_clip": 1.0,
+    "monitor": "val_adapt_monitor_f1",
+    "monitor_mode": "max",
+    "monitor_adapt_episodes": 50
+  },
+  "meta_adapt_cfg": {
+    "episodes": 80,
+    "lr": 0.00025,
+    "weight_decay": 0.0001,
+    "grad_clip": 1.0,
+    "embedding_norm": true,
+    "n_way": 5,
+    "k_shot": 6,
+    "q_query": 6,
+    "min_adapt_samples_for_train": 10,
+    "min_q_query_for_train": 2
+  },
+  "model_cfg": {
+    "d_model": 64,
+    "stride_cnn": 8,
+    "k_cnn": 21,
+    "n_heads": 4,
+    "ff_dim": 256,
+    "num_layers": 2,
+    "dropout": 0.2
+  }
+}
